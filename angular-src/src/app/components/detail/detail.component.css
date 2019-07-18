@@ -1,0 +1,12 @@
+.list-item {
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+ui5-button {
+    margin-top: 5px;
+}

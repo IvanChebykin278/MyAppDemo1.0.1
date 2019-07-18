@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav">
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a [routerLink]="['/dushboard']" class="nav-link">Appliance table</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+          <a [routerLink]="['/profile']" class="nav-link">Profile</a>
+        </li>
+      <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a [routerLink]="['/register']" class="nav-link">Register</a>
+      </li>
+      <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+        <a [routerLink]="['/']" class="nav-link">Login</a>
+      </li>
+      <li *ngIf="authService.loggedIn()" class="nav-item">
+        <a (click)="onLogoutClick()"  class="nav-link" href="#">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

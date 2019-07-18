@@ -1,0 +1,37 @@
+<ui5-title style="color: white" level="H1">Detail list</ui5-title>
+<ui5-panel fixed accessible-role="Complementary" class="full-width">
+  <ui5-title level="H2">Detail appliance with id: {{id}}</ui5-title>
+	<ui5-list id="myList1">
+    <ui5-li>
+      <div class="list-item">
+        <ui5-title level="H3">Name:</ui5-title>
+        <section>{{name}}</section>
+      </div>
+    </ui5-li>
+    <ui5-li>
+      <div class="list-item">
+          <ui5-title level="H3">Type:</ui5-title>
+        <section>{{typ}}</section>
+      </div>
+    </ui5-li>
+    <ui5-li>
+      <div class="list-item">
+        <ui5-title level="H3">Color:</ui5-title>
+        <section>{{color}}</section>
+      </div>
+    </ui5-li>
+    <ui5-li>
+      <div class="list-item">
+        <ui5-title level="H3">Energy class:</ui5-title>
+        <section>{{energyClass}}</section>
+      </div>
+    </ui5-li>
+    <ui5-li>
+      <div class="list-item">
+        <ui5-title level="H3">Weigth:</ui5-title>
+        <section>{{weigth}}</section>
+      </div>
+    </ui5-li>
+  </ui5-list>
+  <ui5-button  (click)="goBack()">Go back</ui5-button>
+</ui5-panel>

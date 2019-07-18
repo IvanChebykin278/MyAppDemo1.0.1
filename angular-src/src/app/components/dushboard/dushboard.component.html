@@ -1,0 +1,29 @@
+<h1 class="rows">Appliances table</h1>
+<ui5-table class="demo-table" id="table">
+	<!-- Columns -->
+	<ui5-table-column slot="columns" popin-text="Name">
+		<span style="line-height: 1.4rem">Name</span>
+	</ui5-table-column>
+
+	<ui5-table-column slot="columns" popin-text="Manufacturer">
+		<span style="line-height: 1.4rem">Manufacturer</span>
+	</ui5-table-column>
+
+	<ui5-table-column slot="columns" popin-text="Price" demand-popin>
+		<span style="line-height: 1.4rem">Price</span>
+  </ui5-table-column>
+
+  <ui5-table-column slot="columns" popin-text="Discription" demand-popin>
+		<span style="line-height: 1.4rem">Discription</span>
+  </ui5-table-column>
+  
+  <ui5-table-row *ngFor="let item of data" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+    <ui5-table-cell>{{item.name}}</ui5-table-cell>
+    <ui5-table-cell>{{item.manufacturer}}</ui5-table-cell>
+    <ui5-table-cell>{{item.price}}</ui5-table-cell>
+    <ui5-table-cell>
+      <ui5-button (click)="onOpenDescription(item._id)">Show Discription</ui5-button>
+    </ui5-table-cell>
+  </ui5-table-row>
+
+</ui5-table>
